@@ -6,45 +6,15 @@
  * blue: #2584B3;
  * highlight: #48A4D2;
  **/
+
 /*CSS Reset to remove all styling and remove browser inconistencies*/
 @import url(./reset.css);
-/*Import fonts and icons*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css);
-/*Responsive*/
-@import url(./responsive.css);
 
-/* Basic styles*/
+/*Import fonts and icons*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 *, *:before, *:after {
     box-sizing: border-box;
-}
-
-a, a:visited, a:focus, a:active {
-    text-decoration: none;
-}
-
-a {
-    color: #ccc;
-    transition: color 0.25s linear;
-}
-
-a:hover {
-    color: #48A4D2;
-}
-
-/* Icons */
-
-.icon {
-    text-rendering: geometricPrecision;
-    font-size: 1.5rem;
-    color: black;
-    transition: color 0.25s linear;
-}
-
-.icon:hover {
-    color: rgb(124, 123, 123);
 }
 
 html {
@@ -59,25 +29,22 @@ body {
     padding: 100px 0;
 
     /*colors and fonts*/
-    font-family: 'Open Sans', 'sans-serif';
-    font-size: 1rem;
     font-weight: 400;
-    color: #ccc;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: black;
 
     /*typography*/
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: subpixel-antialiased;
-    line-height: 1.6;
+    line-height: 1.4;
 
     /*alignment and display*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
-    background-size: 100%;
 }
 
 .container {
@@ -95,13 +62,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .name-section {
-    font-family: 'Raleway', 'sans-serif';
-    font-weight: 300;
-    color: black;
 }
 
 .name-section .name,
@@ -112,11 +76,16 @@ body {
 }
 
 .name-section .name {
+    font-weight: 700;
     font-size: 3rem;
     line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    margin-bottom: 0.5rem;
 }
 
 .name-section .tagline {
+    color: #212121;
     font-size: 1.5rem;
 }
 
@@ -126,19 +95,15 @@ body {
 }
 
 .photo {
-    width: 300px;
-    height: 300px;
+    width: 256px;
+    height: 256px;
     object-fit: cover;
     border-radius: 50%;
     padding: 1px;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-
-ul.list {
-    list-style-type: disc;
 }
 
 /*Footer*/
@@ -155,8 +120,18 @@ footer ul {
 
 footer ul li {
     margin-right: 1rem;
+    width: 2.3em;
+    height: 2.3em;
 }
 
 footer ul li:last-child {
     margin-right: 0;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+svg {
+    fill: black;
 }
