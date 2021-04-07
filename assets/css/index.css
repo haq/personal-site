@@ -1,20 +1,17 @@
-/*Style guide*/
-/**
- * normal: #ccc;
- * dark: #131f21 @alpha 0.95;
- * base-size: 16px;
- * blue: #2584B3;
- * highlight: #48A4D2;
- **/
-
-/*CSS Reset to remove all styling and remove browser inconistencies*/
 @import url(./reset.css);
-
-/*Import fonts and icons*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 *, *:before, *:after {
     box-sizing: border-box;
+}
+
+:root {
+    --background-color: black;
+    --foreground-color: white;
+}
+
+.light-mode {
+    --background-color: white;
+    --foreground-color: black;
 }
 
 html {
@@ -32,7 +29,7 @@ body {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: black;
+    background-color: var(--background-color);
 
     /*typography*/
     text-rendering: optimizeLegibility;
@@ -65,14 +62,12 @@ body {
     margin-bottom: 2rem;
 }
 
-.name-section {
-}
-
 .name-section .name,
 .name-section .tagline {
     display: flex;
     justify-content: center;
     text-align: center;
+    color: var(--foreground-color);
 }
 
 .name-section .name {
@@ -85,7 +80,6 @@ body {
 }
 
 .name-section .tagline {
-    color: #212121;
     font-size: 1.5rem;
 }
 
@@ -97,6 +91,7 @@ body {
 .photo {
     width: 256px;
     height: 256px;
+    cursor: pointer;
     object-fit: cover;
     border-radius: 50%;
     padding: 1px;
@@ -119,7 +114,7 @@ footer ul {
 }
 
 footer ul li {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     width: 2.3em;
     height: 2.3em;
 }
@@ -130,8 +125,9 @@ footer ul li:last-child {
 
 footer a:hover {
     opacity: 0.6;
+    transition: opacity 250ms;
 }
 
 svg {
-    fill: black;
+    fill: var(--foreground-color);
 }
